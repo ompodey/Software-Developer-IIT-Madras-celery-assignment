@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "django-celery-assignment"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{ include = "myproject" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+psycopg2-binary = "^2.9.10"
+celery = "^5.5.2"
+redis = "^6.0.0"
+django = "^5.2.1"
+weasyprint = "^65.1"
+reportlab = "^4.4.0"
+flower = "^2.0.1"
+python-dotenv = "^1.1.0"
+djangorestframework = "^3.14.0"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
