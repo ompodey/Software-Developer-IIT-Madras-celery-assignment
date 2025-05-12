@@ -131,7 +131,41 @@ docker-compose exec web poetry run python manage.py migrate
 | `Success` | `200` |{"task_id": "b2531b04-fb51-4677-9b5a-e87023718185"} |
 | `Failed` | `404/405` | {"error": "message", "details": {}} |
 
-More api docs uploading soon...
+### 2. Check HTML Report Status
+**`GET /assignment/html/<task_id>`**
+
+**Responses:**
+| Status | Code    | Response                |
+| :-------- | :------- | :------------------------- |
+| `Accepted` | `202` | {"status": "PENDING", "student_id": "...", "created_at": "..."} |
+| `Success` | `200` |HTML content|
+| `Failed` | `404/405` | {{"status": "FAILURE", "error": "..."} |
+
+
+
+### 3. Generate PDF Report
+**`POST /assignment/pdf`**
+(Same request format as HTML endpoint)
+
+**Responses:**
+| Status | Code    | Response                |
+| :-------- | :------- | :------------------------- |
+| `Accepted` | `202` | {"task_id": "uuid", "status": "Processing started"} |
+| `Success` | `200` |{"Success"}|
+| `Error` | `404/405` | {{"status": "FAILURE", "error": "..."} |
+
+### 4. Check PDF Report Status
+**`POST /assignment/pdf`**
+(Same request format as HTML endpoint)
+
+**Responses:**
+| Status | Code    | Response                |
+| :-------- | :------- | :------------------------- |
+| `RUNNING` | `202` | {"task_id": "uuid", "status": "Processing started"} |
+| `Success` | `200` |pdf download|
+| `Error` | `404/405` | {{"status": "FAILURE", "error": "..."} |
+
+
 
 ---
 # 7. Using Docker Compose
