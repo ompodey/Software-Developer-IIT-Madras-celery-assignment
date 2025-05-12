@@ -131,6 +131,9 @@ docker-compose exec web poetry run python manage.py migrate
 | `Success` | `200` |{"task_id": "b2531b04-fb51-4677-9b5a-e87023718185"} |
 | `Failed` | `404/405` | {"error": "message", "details": {}} |
 
+- Example
+- ![image](https://github.com/user-attachments/assets/ad2b19ef-dfef-4953-a7f1-5d77eeb48150)
+
 ### 2. Check HTML Report Status
 **`GET /assignment/html/<task_id>`**
 
@@ -141,6 +144,8 @@ docker-compose exec web poetry run python manage.py migrate
 | `Success` | `200` |HTML content|
 | `Failed` | `404/405` | {{"status": "FAILURE", "error": "..."} |
 
+- Example
+- ![image](https://github.com/user-attachments/assets/48dae4e3-5cb2-4101-94a2-4cc7f9f2d2a1)
 
 
 ### 3. Generate PDF Report
@@ -154,6 +159,12 @@ docker-compose exec web poetry run python manage.py migrate
 | `Success` | `200` |{"Success"}|
 | `Error` | `404/405` | {{"status": "FAILURE", "error": "..."} |
 
+
+- Example
+- ![image](https://github.com/user-attachments/assets/d5c8fba0-945c-4757-90c6-b24f64699ee0)
+
+
+
 ### 4. Check PDF Report Status
 **`POST /assignment/pdf`**
 (Same request format as HTML endpoint)
@@ -164,6 +175,10 @@ docker-compose exec web poetry run python manage.py migrate
 | `RUNNING` | `202` | {"task_id": "uuid", "status": "Processing started"} |
 | `Success` | `200` |pdf download|
 | `Error` | `404/405` | {{"status": "FAILURE", "error": "..."} |
+
+- Example
+- ![image](https://github.com/user-attachments/assets/b876acd1-51cc-4fdb-a779-7881c7f0bf87) ![image](https://github.com/user-attachments/assets/c4e8c23f-abe3-4c2e-9dfc-a37db9cb231b)
+
 
 
 
