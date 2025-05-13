@@ -146,6 +146,8 @@ docker-compose exec web poetry run python manage.py migrate
 
 - Example
 - ![image](https://github.com/user-attachments/assets/48dae4e3-5cb2-4101-94a2-4cc7f9f2d2a1)
+- ![image](https://github.com/user-attachments/assets/ca46794d-1f7d-483c-8e46-a636f791974a)
+
 
 
 ### 3. Generate PDF Report
