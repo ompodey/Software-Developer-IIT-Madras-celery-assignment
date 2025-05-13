@@ -65,8 +65,8 @@ This project is a Django REST API integrated with Celery for asynchronous task p
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
-cd django-celery-assignment
+git clone https://github.com/ompodey/Software-Developer-IIT-Madras-celery-assignment
+cd Software-Developer-IIT-Madras-celery-assignment 
 ```
 ### 2. Create a .env File (if not present)
 
